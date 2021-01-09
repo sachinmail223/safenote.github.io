@@ -1,0 +1,606 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body{
+    /* background-image: linear-gradient(120deg, rgb(250, 237, 52), rgb(243, 236, 137)); */
+    background: rgb(235, 224, 82);
+}
+.all header{
+    margin: 2rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    display: flex;
+    background: transparent;
+    padding: .5rem;
+    padding-bottom: 1rem;
+    /* margin-left: 50%; */
+    box-shadow: 2px 5px 10px rgb(148, 140, 23), -2px -5px 10px rgb(250, 251, 149);
+    position: relative;
+    justify-content: center;
+}
+/* header i{
+    display: flex;
+    justify-content: center;
+} */
+.fa-paperclip{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    top: -.5rem;
+    left: 1.5rem;
+    
+}
+.all{
+    display: flex;
+}
+button,
+input,
+form{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    font-size: 2rem;
+    border: none;
+    outline: none;
+    
+}
+.list-note{
+background-color: transparent;
+display: flex;
+margin: 2rem;
+margin-left: auto;
+}
+
+
+
+form{
+    /* margin-left: auto;
+    margin-right: 5%; */
+    position: relative;
+    margin-left: 2rem;
+    height: 3rem;
+    margin: .5rem;
+}
+
+button{
+    cursor: pointer;
+}
+.list,
+.note
+{
+    margin: .5rem;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    color: rgb(71, 7, 7);
+    box-shadow: 2px 5px 10px rgb(148, 140, 23), -2px -5px 10px rgb(250, 251, 149);
+    /* box-shadow:2px 5px 10px rgb(148, 140, 23), -2px -5px 10px rgb(255, 255, 255), inset 2px 5px 10px rgb(148, 140, 23), inset -2px -5px 10px rgb(255, 255, 255); */
+    transition: all .5s ease;
+    
+    
+    
+}
+.list:hover,
+.note:hover{
+    box-shadow:2px 5px 10px rgb(148, 140, 23), -2px -5px 10px rgb(250, 251, 149), inset 2px 5px 10px rgb(148, 140, 23), inset -2px -5px 10px rgb(250, 251, 149);
+    transition: all .5s ease;
+}
+.search input{
+    height: 3rem;
+    width: 3rem;
+    border-radius: 2rem;
+    padding-right: 2rem;
+    background: rgb(243, 228, 14);
+    box-shadow: inset -5px -4px 9px  rgb(231, 233, 125), inset 6px 7px 13px rgb(111, 104, 13);
+    /* padding-left: 4rem; */
+    font-size: 1.5rem;
+    color: rgb(71, 7, 7);
+    transition: all .7s ease;
+    padding-left: 3.2rem;
+    display: flex;
+    align-items: center;
+    
+}
+
+form div{
+    display: flex;
+    position: absolute;
+    background: rgb(243, 228, 14);
+    left: 0;
+    font-size: 1.5rem;
+    align-items: center;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    box-shadow: 2px 5px 10px rgb(148, 140, 23), -2px -5px 10px rgb(250, 251, 149); 
+    pointer-events: none; 
+}
+.fa-search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+.text{
+    display: none;
+    margin: 1rem;
+}
+.list:hover,
+.note:hover
+
+/* .fa-check-square:hover,
+.fa-file-alt:hover */
+        {
+    transition: all .5s ease;
+    width: 12rem;
+    display: flex;
+    justify-content: center;
+    
+}
+
+span{
+    pointer-events: none;
+
+}
+.textnone{
+    display: none;
+}
+.textshow{
+   
+    display: flex;
+    transition: all .5s ease;
+}
+
+.search input:hover{
+    width: 25rem;
+    transition: all .7s ease;
+}
+.list i{
+    margin-right: 1rem;
+}
+.main{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.write,
+.write-list{
+    width: 10%;
+    height: 10rem;
+    background: rgb(240, 232, 122);
+    box-shadow: 2px 5px 10px rgb(148, 140, 23), -2px -5px 10px rgb(250, 251, 149);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    margin-left: 2.5%;
+    margin-top: 5%;
+    padding-top: 3rem;
+    display: none;
+    opacity: 0;
+
+}
+.main-note{
+    background: transparent;
+    border: none;
+    margin: 1rem;
+    height: 70%;
+    font-size: 1.5rem;
+    padding: 1rem;
+    font: bold;
+    overflow: hidden;
+}
+.write .fa-paperclip,
+.write-list .fa-paperclip{
+    position: absolute;
+    font-size: 4.5rem;
+    top: -2rem;
+    display: flex;
+    color: rgb(148, 35, 15);
+}
+.note-submit,
+.list-submit{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 2rem;
+    display: flex;
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    background: rgb(243, 228, 14);
+    box-shadow: 2px 5px 10px rgb(148, 140, 23), -2px -5px 10px rgb(250, 251, 149);
+    color: rgb(148, 35, 15);
+}
+.write .fa-check,
+.write-list .fa-check{
+    display: flex;
+    margin: auto;
+    pointer-events: none;
+}
+.note-submit:hover,
+.list-submit:hover{
+    box-shadow:2px 5px 10px rgb(148, 140, 23), -2px -5px 10px rgb(250, 251, 149), inset 2px 5px 10px rgb(148, 140, 23), inset -2px -5px 10px rgb(250, 251, 149);
+    transition: all .5s ease;
+    
+}
+.title,
+.list-title{
+    background: transparent;
+    height: 2.5rem;
+    border: none;
+    font-weight: 600;
+    font-size: 1.8rem;
+    padding: .1rem;
+    padding-left: 1rem;
+    margin: 1rem;
+    border-bottom: 1px solid black;
+    /* overflow: hidden; */
+    scroll-behavior: auto;
+}
+.title:focus,
+.list-title:focus{
+    outline: none;
+}
+.showWrite{
+    width: 95%;
+    height: 32rem;
+    display: flex;
+    opacity: 1;
+    transition: all 2s ease;
+    
+}
+.container{
+    display: flex;
+    padding: 0rem;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    pointer-events: none;
+    position: relative;
+}
+.div-note,
+.div-list{
+    width: 10rem;
+    height: 13rem;
+    background: rgb(240, 232, 122);
+    box-shadow: 2px 5px 10px rgb(148, 140, 23), -2px -5px 10px rgb(250, 251, 149);
+    border-radius: 1rem;
+    margin: 1rem;
+    position: relative;
+    padding: 2rem;
+    pointer-events: fill;
+    cursor: pointer;
+}
+
+.div-note li{
+    list-style: none;
+}
+.div-note i,
+.div-list i {
+    position: absolute;
+    font-size: 3rem;
+    top: -1rem;
+    pointer-events: none;
+    
+}
+
+.div-note .fa-paperclip,
+.div-list .fa-paperclip{
+    color: rgb(148, 35, 15);
+}
+
+.div-note textarea,
+.div-note button{
+    display: none;
+}
+.divT{
+    display: flex;
+    position: absolute;
+    pointer-events: none;
+    padding: .2rem;
+    padding-right: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    left: 5%;
+    top: 20%;
+    width: 90%;
+    border-bottom: 1px solid rgb(173, 165, 165) ;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 1.6rem;
+
+}
+.divN,
+.divL{
+    display: flex;
+    position: absolute;
+    pointer-events: none;
+    padding: .2rem;
+    padding-right: 1rem;
+    font-size: .8rem;
+    font-weight: 300;
+    left: 5%;
+    top: 35%;
+    width: 90%;
+    /* border: 1px solid black; */
+    /* white-space: nowrap; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 7.3rem;
+    flex-wrap: wrap;
+    
+}
+
+.divL .complete-btn{
+    height: 1rem;
+    width: 1rem;
+    border-radius: 2px;
+    border: 2px solid rgb(148, 35, 15);
+    pointer-events: none;
+    font-size: 1rem;
+    
+}
+.divL .list-add{
+    height: 1rem;
+    width: 80%;
+    font-size: .8rem;
+    padding: 0;
+    pointer-events: none;
+}
+.close-note,
+.close-list{
+    font-size: 1.2rem;
+    position: absolute;
+    top: 1%;
+    right: 1%;
+    height: 1.5rem;
+    width: 1.5rem;
+    background: rgb(148, 35, 15);
+    color: rgb(240, 232, 122);
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.close-note:hover,
+.close-list:hover{
+    background: rgb(240, 232, 122);
+    color: rgb(148, 35, 15);
+}
+.fa-times{
+    pointer-events: none;
+}
+.list-item{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: auto;
+    /* pointer-events: none; */
+    max-height: 80%;
+}
+.complete-btn{
+    display: flex;
+    font-size: 1.5rem;
+    border: 2px solid rgb(148, 35, 15);
+    background: transparent;
+    padding: .3rem;
+    color:  transparent;
+    margin-left: 2%;
+    margin-right: 2%;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: .3rem;
+    pointer-events: fill;
+}
+.add{
+    display: flex;
+    font-size: 1.8rem;
+    background: transparent;
+    padding: .3rem;
+    color: rgb(148, 35, 15);
+    width: 2rem;
+    margin: 2.2%;
+    margin-top: 1%;
+    margin-left: 4.3%;
+}
+.list-add{
+    width: 85%;
+    background: transparent;
+    border: none;
+    height: 2.5rem;
+    padding-left: 2rem;
+    font-size: 1.5rem;
+    font-weight: 550;
+    display: flex;
+    padding: .5rem;
+    overflow: hidden;
+    /* margin-bottom: 1rem; */
+    pointer-events: fill;
+}
+.list-add:focus{
+    outline: none;
+}
+
+.list-container{
+    height: 75%;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+.list-container::-webkit-scrollbar {
+    display: none;
+}
+.list-item::-webkit-scrollbar {
+    display: none;
+}
+
+.check{
+    color: rgb(148, 35, 15);
+
+}
+
+.divL .check{
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+.divL i{
+    font-size: .6rem;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top: .15rem;
+
+}
+
+.div-note .file-type,
+.div-list .file-type{
+    font-size: .8rem;
+    font-weight: 600;
+    position: absolute;
+    top: 5%;
+    left: 40%;
+    color: rgb(148, 35, 15);
+}
+
+
+.newitem-div .remove-item{
+    height: 2rem;
+    width: 2rem;
+    padding: .5rem;
+    margin: .5rem;
+    font-size: 2rem;
+    transition: all .5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    color: rgb(148, 35, 15);
+    
+}
+.divL .remove-item{
+    display: none;
+}
+
+.remove-item .i{
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    
+}
+.newitem-div{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: .2rem;
+}
+
+.slide{
+    transform: translatex(-60%);
+    opacity: 0;
+    transition: all .6s ease-in-out;
+}
+
+.faide{
+    opacity: 50%;
+    transition: all .6s ease-in-out;
+}
+.cut{
+    text-decoration: line-through solid red;
+    transition: all .6s ease-in-out;
+}
+
+.div-note .delet-note{
+    position: absolute;
+    top: 4%;
+    right: 4%;
+    height: 1rem;
+    width: 1rem;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.delet-note i{
+    position: absolute;
+    top: 0;
+    font-size: 1rem;
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+}
+
+.div-list .delet-list{
+    position: absolute;
+    top: 4%;
+    right: 4%;
+    height: 1rem;
+    width: 1rem;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.delet-list i{
+    position: absolute;
+    top: 0;
+    font-size: 1rem;
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+}
+@media screen and (max-width: 768px){
+    .container {
+        justify-content: space-between;
+        padding: 10%;
+    }
+    .div-note .fa-paperclip,
+    .div-list .fa-paperclip{
+        font-size: 2rem;
+        top: -.8rem;
+    }
+}
+@media screen and (max-width: 480px){
+    .container {
+        justify-content: space-between;
+        padding: 7%;
+    }
+
+    .div-note,
+    .div-list {
+        width: 9rem;
+        height: 11rem;
+    }
+}
+@media screen and (max-width: 320px){
+    .container {
+        
+        justify-content: space-between;
+        padding: 0%;
+    }
+
+    .div-note,
+    .div-list {
+        width: 8rem;
+        height: 10rem;
+    }
+    .div-note .file-type,
+    .div-list .file-type{
+        font-size: .7rem;
+}
+}

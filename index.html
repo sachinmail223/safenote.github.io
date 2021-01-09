@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="./style.css">
+    <title>Safe_Note</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="all">
+            <header><i class="fas fa-paperclip"></i><br>Note<br>Safe</header>
+            <div class="list-note">
+
+                <button type="submit" class="list">
+                    <!-- <i class = "textnone">[+]list</i> -->
+                    <span class="far fa-check-square"></span>
+
+                </button>
+                <button type="submit" class="note">
+                    <span class="far fa-file-alt"></span>
+                </button>
+
+                <form action="search" class="search">
+                    <input type="text" class="search-filter">
+                    <div>
+                        <i class="fas fa-search"></i>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+        <div class="container">
+
+        </div>
+
+
+        <div class="write">
+            <i class="fas fa-paperclip"></i>
+            <button class="close-note">
+                <i class="fas fa-times"></i>
+            </button>
+            <textarea name="" class="title" placeholder="Title"></textarea>
+            <textarea name="" class="main-note" placeholder="Note"></textarea>
+            <button type="submit" class="note-submit">
+                <i class="fas fa-check"></i>
+            </button>
+        </div>
+
+
+        <div class="write-list">
+            <i class="fas fa-paperclip"></i>
+            <button class="close-list">
+                <i class="fas fa-times"></i>
+            </button>
+            <textarea name="" class="list-title" placeholder="Title"></textarea>
+            <div class="list-container">
+                <div class="list-item">
+                    <div class = "newitem-div">
+                    <button type="submit" class="complete-btn">
+                        <i class="fas fa-check"></i>
+                    </button>
+                    <textarea name="" class="list-add" placeholder="Input your List item"></textarea>
+                    <button class="remove-item">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+                <button class="add">
+                    <i class="fas fa-plus"></i>
+                </button>
+            </div>
+            <button type="submit" class="list-submit">
+                <i class="fas fa-check"></i>
+            </button>
+        </div>
+
+
+
+    </div>
+    <script src="./app.js"></script>
+</body>
+
+</html>
